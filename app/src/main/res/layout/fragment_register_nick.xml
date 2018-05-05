@@ -1,37 +1,23 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
-    tools:context="com.chaeniiz.colco.RegisterNickFragment"
-    android:orientation="vertical">
+    tools:context="com.chaeniiz.colco.RegisterNickFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="0.1">
-
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_chevron_left_black_24dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="70dp">
 
         <TextView
+            android:id="@+id/tv_notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
             android:text="COLCO에서 당신을\n무엇이라 부를까요?"
             android:textSize="14pt" />
 
@@ -43,19 +29,4 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="다음으로" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
