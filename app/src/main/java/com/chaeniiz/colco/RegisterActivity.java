@@ -1,6 +1,7 @@
 package com.chaeniiz.colco;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -67,6 +68,9 @@ public class RegisterActivity extends AppCompatActivity {
                     RegisterPersonalColorFragment registerPersonalColorFragment = new RegisterPersonalColorFragment();
                     tr.replace(R.id.frame, registerPersonalColorFragment, "personalColor");
                     tr.commit();
+                } else {
+                    Intent intent = new Intent(this, FeedActivity.class);
+                    startActivity(intent);
                 }
                 break;
         }
