@@ -37,6 +37,16 @@ public class RegisterActivity extends AppCompatActivity {
                     RegisterNickFragment registerNickFragment = new RegisterNickFragment();
                     tr.replace(R.id.frame, registerNickFragment, "nick");
                     tr.commit();
+                } else if(fragment.getTag() == "gender") {
+                    FragmentTransaction tr = fm.beginTransaction();
+                    RegisterBirthFragment registerBirthFragment = new RegisterBirthFragment();
+                    tr.replace(R.id.frame, registerBirthFragment, "birth");
+                    tr.commit();
+                } else if(fragment.getTag() == "personalColor") {
+                    FragmentTransaction tr = fm.beginTransaction();
+                    RegisterGenderFragment registerGenderFragment = new RegisterGenderFragment();
+                    tr.replace(R.id.frame, registerGenderFragment, "gender");
+                    tr.commit();
                 }
                 break;
 
@@ -48,6 +58,14 @@ public class RegisterActivity extends AppCompatActivity {
                     Log.e("ok","nick");
                     RegisterBirthFragment registerBirthFragment = new RegisterBirthFragment();
                     tr.replace(R.id.frame, registerBirthFragment, "birth");
+                    tr.commit();
+                } else if(fragment.getTag() == "birth") {
+                    RegisterGenderFragment registerGenderFragment = new RegisterGenderFragment();
+                    tr.replace(R.id.frame, registerGenderFragment, "gender");
+                    tr.commit();
+                } else if(fragment.getTag() == "gender") {
+                    RegisterPersonalColorFragment registerPersonalColorFragment = new RegisterPersonalColorFragment();
+                    tr.replace(R.id.frame, registerPersonalColorFragment, "personalColor");
                     tr.commit();
                 }
                 break;

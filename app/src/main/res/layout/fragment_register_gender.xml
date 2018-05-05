@@ -1,13 +1,52 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chaeniiz.colco.RegisterGenderFragment">
+    tools:context="com.chaeniiz.colco.RegisterGenderFragment"
+    android:id="@+id/fragment_register_gender">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="당신의 성별을\n알려 주세요."
+            android:textSize="14pt" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_gender_fm"
+                android:text="여성"
+                android:textSize="10pt"
+                android:button="@null"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/rb_gender_m"
+                android:text="남성"
+                android:textSize="10pt"
+                android:button="@null"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>
