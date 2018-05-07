@@ -3,15 +3,11 @@ package com.chaeniiz.colco;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
-public class FeedActivity extends AppCompatActivity {
+public class FeedActivity extends BaseActivity {
 
-    private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,5 +45,15 @@ public class FeedActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public int getContentViewId() {
+        return R.layout.activity_feed;
+    }
+
+    @Override
+    public int getNavigationMenuItemId() {
+        return R.id.menu_feed;
     }
 }
