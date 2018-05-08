@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_upload_feed"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="피드 업로드"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btn_upload_item"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="아이템 업로드"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_upload_feed"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/element_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

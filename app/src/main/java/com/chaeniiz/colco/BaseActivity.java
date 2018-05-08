@@ -40,13 +40,13 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             if (itemId == R.id.menu_feed) {
                 startActivity(new Intent(this, FeedActivity.class));
             } else if (itemId == R.id.menu_vote) {
-                startActivity(new Intent(this, ScrapActivity.class));
+                startActivity(new Intent(this, VoteActivity.class));
             } else if (itemId == R.id.menu_upload) {
-                startActivity(new Intent(this, ScrapActivity.class));
+                startActivity(new Intent(this, UploadActivity.class));
             } else if (itemId == R.id.menu_scrap) {
                 startActivity(new Intent(this, ScrapActivity.class));
             } else if (itemId == R.id.menu_my_page) {
-                startActivity(new Intent(this, ScrapActivity.class));
+                startActivity(new Intent(this, MyPageActivity.class));
             }
             finish();
         }, 300);
