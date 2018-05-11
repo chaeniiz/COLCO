@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 public abstract class BaseActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     protected BottomNavigationView navigationView;
+    MenuItem previousMenuId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
     protected void onStart() {
         super.onStart();
         updateNavigationBarState();
+        previousMenuId = navigationView.getMenu().findItem(navigationView.getSelectedItemId());
+        Log.e("previousMenuId: ", String.valueOf(previousMenuId));
     }
 
     // Remove inter-activity transition to avoid screen tossing on tapping bottom navigation items
@@ -42,6 +46,15 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             } else if (itemId == R.id.menu_vote) {
                 startActivity(new Intent(this, VoteActivity.class));
             } else if (itemId == R.id.menu_upload) {
+                if(previousMenuId.getItemId() == R.id.menu_feed) {
+                    startActivity(new Intent(this, FeedActivity.class));
+                } else if(previousMenuId.getItemId() == R.id.menu_vote) {
+                    startActivity(new Intent(this, VoteActivity.class));
+                } else if(previousMenuId.getItemId() == R.id.menu_scrap) {
+                    startActivity(new Intent(this, ScrapActivity.class));
+                } else if(previousMenuId.getItemId() == R.id.menu_my_page) {
+                    startActivity(new Intent(this, MyPageActivity.class));
+                }
                 startActivity(new Intent(this, UploadActivity.class));
             } else if (itemId == R.id.menu_scrap) {
                 startActivity(new Intent(this, ScrapActivity.class));
