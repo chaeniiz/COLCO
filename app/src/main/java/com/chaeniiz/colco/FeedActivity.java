@@ -8,25 +8,12 @@ public class FeedActivity extends BaseActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-//    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
 
         super.onCreate(savedInstanceState);
-
-//        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
-//
-//        bottomNavigationView.setOnNavigationItemSelectedListener(
-//                item -> {
-//                    switch (item.getItemId()) {
-//                        case R.id.menu_upload:
-//                            startActivity(new Intent(this, UploadActivity.class));
-//                            return true;
-//                    }
-//                    return false;
-//                });
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.addTab(tabLayout.newTab().setText("HOTTEST"));
