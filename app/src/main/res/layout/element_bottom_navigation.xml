@@ -5,6 +5,8 @@
     android:id="@+id/navigation"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/windowBackground"
+    android:background="@android:color/white"
+    app:itemIconTint="#5c5c5c"
+    app:itemTextColor="#5c5c5c"
     app:menu="@menu/menu"
     />

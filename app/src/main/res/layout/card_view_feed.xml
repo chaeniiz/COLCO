@@ -17,25 +17,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:id="@+id/iv_thumbnail"/>
-            <TextView
-                android:id="@+id/tv_title"
-                android:gravity="center|left"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="URL"
-                android:textSize="20dp"
-                android:textColor="#000000"/>
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/iv_profile"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:id="@+id/tv_id"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=", "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="personal color"
+                    android:id="@+id/tv_personal_color"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="center"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                android:id="@+id/iv_thumbnail"/>
+
             <TextView
                 android:id="@+id/tv_explaination"
                 android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
                 android:padding="10dp"
                 android:text="explanation"
                 android:textColor="#000000"/>
@@ -44,24 +74,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="right"
-                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginBottom="10dp">
 
                 <ImageButton
-                    android:id="@+id/iv_delete"
+                    android:id="@+id/iv_heart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_delete_black_24dp"
+                    android:src="@drawable/ic_favorite_black_24dp"
                     android:scaleType="fitXY"
                     android:background="@android:color/transparent"
                     android:layout_marginRight="8dp"/>
 
-                <ImageButton
-                    android:id="@+id/iv_edit"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_create_black_24dp"
+                    android:text="10"
+                    android:id="@+id/tv_heart"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/iv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_comment_black_24dp"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/tv_comment"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/iv_scrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_link_black_24dp"
                     android:scaleType="fitXY"
                     android:background="@android:color/transparent"/>
             </LinearLayout>

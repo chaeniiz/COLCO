@@ -11,6 +11,7 @@ import android.view.MenuItem;
 public abstract class BaseActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     protected BottomNavigationView navigationView;
+    MenuItem previousMenuId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
     protected void onStart() {
         super.onStart();
         updateNavigationBarState();
+        previousMenuId = navigationView.getMenu().findItem(navigationView.getSelectedItemId());
+        Log.e("previousMenuId: ", String.valueOf(previousMenuId));
         Log.e("content view id: ", String.valueOf(getContentViewId()));
     }
 
@@ -52,6 +55,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
                     startActivity(new Intent(this, ScrapActivity.class));
                 } else if(getContentViewId() == R.layout.activity_my_page) {
                     startActivity(new Intent(this, MyPageActivity.class));
+                } else if(getContentViewId() == R.layout.activity_setting) {
+                    startActivity(new Intent(this, SettingActivity.class));
                 } else if(getContentViewId() == R.layout.activity_upload_feed) {
                     startActivity(new Intent(this, UploadFeedActivity.class));
                 } else if(getContentViewId() == R.layout.activity_upload_item) {

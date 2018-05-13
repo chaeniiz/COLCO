@@ -26,11 +26,11 @@ public class FeedTabHottestFragment extends Fragment {
 
         List<Feed> items = new ArrayList<>();
         Feed[] item = new Feed[5];
-        item[0] = new Feed(R.drawable.thumbnail, "title", "explanation");
-        item[1] = new Feed(R.drawable.thumbnail, "title", "explanation");
-        item[2] = new Feed(R.drawable.thumbnail, "title", "explanation");
-        item[3] = new Feed(R.drawable.thumbnail, "title", "explanation");
-        item[4] = new Feed(R.drawable.thumbnail, "title", "explanation");
+        item[0] = new Feed(R.drawable.profile, R.drawable.profile, "chaeniiz", "여름 쿨 뮤트", "저 무슨 톤 같나용?");
+        item[1] = new Feed(R.drawable.profile, R.drawable.profile, "chaeniiz", "여름 쿨 뮤트", "저 무슨 톤 같나용?");
+        item[2] = new Feed(R.drawable.profile, R.drawable.profile, "chaeniiz", "여름 쿨 뮤트", "저 무슨 톤 같나용?");
+        item[3] = new Feed(R.drawable.profile, R.drawable.profile, "chaeniiz", "여름 쿨 뮤트", "저 무슨 톤 같나용?");
+        item[4] = new Feed(R.drawable.profile, R.drawable.profile, "chaeniiz", "여름 쿨 뮤트", "저 무슨 톤 같나용?");
 
         for(int i = 0; i < 5; i++) {
             items.add(item[i]);

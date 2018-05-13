@@ -35,14 +35,17 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(FeedAdapter.ViewHolder holder, int position) {
         final Feed item = items.get(position);
-        Drawable drawable = context.getResources().getDrawable(item.getThumbnail());
-        holder.thumbnail.setBackground(drawable);
-        holder.title.setText(item.getTitle());
+        Drawable thumbnail = context.getResources().getDrawable(item.getThumbnail());
+        Drawable profile = context.getResources().getDrawable(item.getProfile());
+        holder.thumbnail.setBackground(thumbnail);
+        holder.profile.setBackground(profile);
+        holder.id.setText(item.getId());
+        holder.personalColor.setText(item.getPersonalColor());
         holder.explanation.setText(item.getExplanation());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -54,14 +57,18 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView thumbnail;
-        TextView title;
+        ImageView profile;
+        TextView id;
+        TextView personalColor;
         TextView explanation;
         CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             thumbnail = (ImageView)itemView.findViewById(R.id.iv_thumbnail);
-            title = (TextView)itemView.findViewById(R.id.tv_title);
+            profile = (ImageView)itemView.findViewById(R.id.iv_profile);
+            id = (TextView)itemView.findViewById(R.id.tv_id);
+            personalColor = (TextView)itemView.findViewById(R.id.tv_personal_color);
             explanation = (TextView)itemView.findViewById(R.id.tv_explaination);
             cardView = (CardView) itemView.findViewById(R.id.cardview);
         }
