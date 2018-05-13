@@ -11,7 +11,6 @@ import android.view.MenuItem;
 public abstract class BaseActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     protected BottomNavigationView navigationView;
-    MenuItem previousMenuId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
     protected void onStart() {
         super.onStart();
         updateNavigationBarState();
-        previousMenuId = navigationView.getMenu().findItem(navigationView.getSelectedItemId());
-        Log.e("previousMenuId: ", String.valueOf(previousMenuId));
+        Log.e("content view id: ", String.valueOf(getContentViewId()));
     }
 
     // Remove inter-activity transition to avoid screen tossing on tapping bottom navigation items
@@ -46,14 +44,18 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             } else if (itemId == R.id.menu_vote) {
                 startActivity(new Intent(this, VoteActivity.class));
             } else if (itemId == R.id.menu_upload) {
-                if(previousMenuId.getItemId() == R.id.menu_feed) {
+                if(getContentViewId() == R.layout.activity_feed) {
                     startActivity(new Intent(this, FeedActivity.class));
-                } else if(previousMenuId.getItemId() == R.id.menu_vote) {
+                } else if(getContentViewId() == R.layout.activity_vote) {
                     startActivity(new Intent(this, VoteActivity.class));
-                } else if(previousMenuId.getItemId() == R.id.menu_scrap) {
+                } else if(getContentViewId() == R.layout.activity_scrap) {
                     startActivity(new Intent(this, ScrapActivity.class));
-                } else if(previousMenuId.getItemId() == R.id.menu_my_page) {
+                } else if(getContentViewId() == R.layout.activity_my_page) {
                     startActivity(new Intent(this, MyPageActivity.class));
+                } else if(getContentViewId() == R.layout.activity_upload_feed) {
+                    startActivity(new Intent(this, UploadFeedActivity.class));
+                } else if(getContentViewId() == R.layout.activity_upload_item) {
+                    startActivity(new Intent(this, UploadItemActivity.class));
                 }
                 startActivity(new Intent(this, UploadActivity.class));
             } else if (itemId == R.id.menu_scrap) {
