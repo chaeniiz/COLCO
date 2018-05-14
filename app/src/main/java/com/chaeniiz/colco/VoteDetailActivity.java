@@ -1,6 +1,9 @@
 package com.chaeniiz.colco;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class VoteDetailActivity extends BaseActivity {
 
@@ -8,6 +11,17 @@ public class VoteDetailActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
         super.onCreate(savedInstanceState);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ImageButton ibtnBack = (ImageButton) findViewById(R.id.btn_back);
+        ibtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override

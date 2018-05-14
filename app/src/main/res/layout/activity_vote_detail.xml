@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".VoteDetailActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_vote_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Vote Detail"
+        android:layout_below="@id/toolbar"
         android:textSize="30pt"/>
 
     <include
