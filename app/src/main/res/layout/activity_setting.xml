@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".SettingActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:text="Setting"
         android:textSize="30pt"/>
 
