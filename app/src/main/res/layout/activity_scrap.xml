@@ -7,10 +7,19 @@
     tools:context=".ScrapActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        android:text="스크랩"
+        android:id="@+id/tv_scrap"
+        android:padding="12dp"
+        android:layout_alignParentTop="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_scrap"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Scrap"
-        android:textSize="30pt"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_scrap" />
 
     <include
         android:id="@+id/navigation"
