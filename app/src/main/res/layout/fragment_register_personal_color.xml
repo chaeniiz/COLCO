@@ -23,7 +23,7 @@
             android:textSize="14pt" />
 
         <RadioGroup
-            android:id="@+id/rg_gender"
+            android:id="@+id/rg_personal_color"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
