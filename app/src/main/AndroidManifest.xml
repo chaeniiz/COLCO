@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FeedActivity" />
+        <activity android:name=".ui.activity.FeedActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.activity.LoginActivity"
             android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ScrapActivity" />
-        <activity android:name=".VoteActivity" />
-        <activity android:name=".VoteDetailActivity" />
-        <activity android:name=".MyPageActivity" />
-        <activity android:name=".SettingActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.ScrapActivity" />
+        <activity android:name=".ui.activity.VoteActivity" />
+        <activity android:name=".ui.activity.VoteDetailActivity" />
+        <activity android:name=".ui.activity.MyPageActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
         <activity
-            android:name=".UploadActivity"
+            android:name=".ui.activity.UploadActivity"
             android:theme="@style/Transparent" />
-        <activity android:name=".UploadFeedActivity" />
-        <activity android:name=".UploadItemActivity"></activity>
+        <activity android:name=".ui.activity.UploadFeedActivity" />
+        <activity android:name=".ui.activity.UploadItemActivity"></activity>
     </application>
 
 </manifest>
