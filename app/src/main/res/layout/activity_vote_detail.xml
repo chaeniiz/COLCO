@@ -13,13 +13,185 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Vote Detail"
-        android:layout_below="@id/toolbar"
-        android:textSize="30pt"/>
+        android:layout_height="206dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:id="@+id/linear">
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
+            android:src="@drawable/thumbnail_product" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:layout_margin="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상호명" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제품명" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="퍼스널 컬러"
+                android:textSize="10pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="n%" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:text="겨울 쿨 브라이트" />
+
+                    <TextView android:text="20%" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:text="가을 웜 뮤트" />
+
+                    <TextView android:text="10%" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:text="가을 웜 딥" />
+
+                    <TextView android:text="5%" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:textSize="5pt"
+                    android:text="투표하기" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:textSize="5pt"
+                    android:text="투표결과" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="#cccccc"
+        android:layout_below="@id/linear" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/hr"
+        android:layout_margin="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/profile"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=", "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="personal color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="n분 전"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저 뮤트인데 톡톡 발라서 쓰면 괜찮아요!"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navigation"
+        android:orientation="horizontal"
+        android:layout_margin="12dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="댓글 쓰기..."/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작성"/>
+
+    </LinearLayout>
     <include
         android:id="@+id/navigation"
         layout="@layout/element_bottom_navigation"
