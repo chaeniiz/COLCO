@@ -78,7 +78,7 @@
                 android:layout_marginBottom="10dp">
 
                 <ImageButton
-                    android:id="@+id/iv_heart"
+                    android:id="@+id/ib_heart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_favorite_black_24dp"
@@ -94,7 +94,7 @@
                     android:layout_marginRight="15dp"/>
 
                 <ImageButton
-                    android:id="@+id/iv_comment"
+                    android:id="@+id/ib_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_comment_black_24dp"
@@ -110,7 +110,7 @@
                     android:layout_marginRight="15dp"/>
 
                 <ImageButton
-                    android:id="@+id/iv_scrap"
+                    android:id="@+id/ib_scrap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_link_black_24dp"

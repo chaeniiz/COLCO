@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
-import com.chaeniiz.colco.ui.adapter.FeedTabPagerAdapter;
 import com.chaeniiz.colco.R;
+import com.chaeniiz.colco.ui.adapter.FeedTabPagerAdapter;
 
 public class FeedActivity extends BaseActivity {
 

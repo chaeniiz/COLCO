@@ -29,7 +29,8 @@
             android:name=".ui.activity.UploadActivity"
             android:theme="@style/Transparent" />
         <activity android:name=".ui.activity.UploadFeedActivity" />
-        <activity android:name=".ui.activity.UploadItemActivity"></activity>
+        <activity android:name=".ui.activity.UploadItemActivity" />
+        <activity android:name=".ui.activity.FeedCommentActivity"></activity>
     </application>
 
 </manifest>

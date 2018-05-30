@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chaeniiz.colco.data.model.Feed;
 import com.chaeniiz.colco.R;
+import com.chaeniiz.colco.data.model.Feed;
 import com.chaeniiz.colco.ui.adapter.FeedAdapter;
 
 import java.util.ArrayList;
@@ -41,7 +41,6 @@ public class FeedTabHottestFragment extends Fragment {
         }
 
         rvFeedHottest.setAdapter(new FeedAdapter(getActivity(), items, R.layout.tab_fragment_feed_hottest));
-
 
         return view;
     }
