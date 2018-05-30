@@ -19,7 +19,8 @@
         android:id="@+id/rv_scrap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_scrap" />
+        android:layout_below="@+id/tv_scrap"
+        android:layout_above="@id/navigation"/>
 
     <include
         android:id="@+id/navigation"
