@@ -252,10 +252,13 @@
                         android:text="생년월일"
                         android:layout_marginRight="20dp"/>
 
-                    <Spinner
-                        android:id="@+id/sp_birth"
+                    <TextView
+                        android:id="@+id/tv_birth"
+                        android:clickable="true"
+                        android:onClick="showDatePickerDialog"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.Spinner"/>
 
                 </LinearLayout>
 
