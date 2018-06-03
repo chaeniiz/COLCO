@@ -49,21 +49,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             } else if (itemId == R.id.menu_vote) {
                 startActivity(new Intent(this, VoteActivity.class));
             } else if (itemId == R.id.menu_upload) {
-                if(getContentViewId() == R.layout.activity_feed) {
-                    startActivity(new Intent(this, FeedActivity.class));
-                } else if(getContentViewId() == R.layout.activity_vote) {
-                    startActivity(new Intent(this, VoteActivity.class));
-                } else if(getContentViewId() == R.layout.activity_scrap) {
-                    startActivity(new Intent(this, ScrapActivity.class));
-                } else if(getContentViewId() == R.layout.activity_my_page) {
-                    startActivity(new Intent(this, MyPageActivity.class));
-                } else if(getContentViewId() == R.layout.activity_setting) {
-                    startActivity(new Intent(this, SettingActivity.class));
-                } else if(getContentViewId() == R.layout.activity_upload_feed) {
-                    startActivity(new Intent(this, UploadFeedActivity.class));
-                } else if(getContentViewId() == R.layout.activity_upload_item) {
-                    startActivity(new Intent(this, UploadItemActivity.class));
-                }
                 startActivity(new Intent(this, UploadActivity.class));
             } else if (itemId == R.id.menu_scrap) {
                 startActivity(new Intent(this, ScrapActivity.class));
