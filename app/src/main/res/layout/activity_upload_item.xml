@@ -111,6 +111,7 @@
             android:background="@drawable/border">
 
             <ImageButton
+                android:id="@+id/ibtn_upload_item"
                 android:layout_width="50dp"
                 android:layout_height="50dp" />
 

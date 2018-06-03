@@ -29,6 +29,7 @@
             android:background="@drawable/border">
 
             <ImageButton
+                android:id="@+id/ibtn_upload_feed"
                 android:layout_width="50dp"
                 android:layout_height="50dp" />
 
