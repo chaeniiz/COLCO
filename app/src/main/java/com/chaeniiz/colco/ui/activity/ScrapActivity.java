@@ -1,6 +1,5 @@
 package com.chaeniiz.colco.ui.activity;
 
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -16,7 +15,6 @@ public class ScrapActivity extends BaseActivity {
 
     RecyclerView rvScrap;
     ScrapAdapter adapter;
-    Paint p = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
