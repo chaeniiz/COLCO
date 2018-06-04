@@ -27,7 +27,10 @@ public class UploadFeedActivity extends BaseActivity {
     List<UploadImage> items = new ArrayList<>();
     UploadImage[] item = new UploadImage[10];
     int imageCount = 0;
+
     TextView tvItemCount;
+    ImageButton ibtnUploadFeed;
+    ImageButton ibtnClose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class UploadFeedActivity extends BaseActivity {
         LinearLayoutManager lm = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         rvUploadImage.setLayoutManager(lm);
 
-        ImageButton ibtnUploadFeed = (ImageButton) findViewById(R.id.ibtn_upload_feed);
+        ibtnUploadFeed = (ImageButton) findViewById(R.id.ibtn_upload_feed);
         ibtnUploadFeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +57,7 @@ public class UploadFeedActivity extends BaseActivity {
             }
         });
 
-        ImageButton ibtnClose = (ImageButton) findViewById(R.id.btn_close);
+        ibtnClose = (ImageButton) findViewById(R.id.btn_close);
         ibtnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
