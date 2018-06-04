@@ -2,8 +2,6 @@ package com.chaeniiz.colco.ui.adapter;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +12,6 @@ import android.widget.ImageView;
 
 import com.chaeniiz.colco.R;
 import com.chaeniiz.colco.data.model.UploadImage;
-import com.chaeniiz.colco.ui.activity.VoteDetailActivity;
 
 import java.util.List;
 
@@ -39,15 +36,8 @@ public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.
     @Override
     public void onBindViewHolder(UploadImageAdapter.ViewHolder holder, int position) {
         final UploadImage item = items.get(position);
-        Drawable drawable = context.getResources().getDrawable(item.getThumbnail());
-        holder.thumbnail.setBackground(drawable);
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, VoteDetailActivity.class);
-                context.startActivity(intent);
-            }
-        });
+        holder.thumbnail.setImageBitmap(item.getThumbnail());
+
     }
 
     @Override

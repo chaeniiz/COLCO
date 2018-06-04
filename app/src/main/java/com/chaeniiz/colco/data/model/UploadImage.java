@@ -1,13 +1,15 @@
 package com.chaeniiz.colco.data.model;
 
-public class UploadImage {
-    public int thumbnail;
+import android.graphics.Bitmap;
 
-    public int getThumbnail() {
+public class UploadImage {
+    public Bitmap thumbnail;
+
+    public Bitmap getThumbnail() {
         return this.thumbnail;
     }
 
-    public UploadImage(int thumbnail) {
+    public UploadImage(Bitmap thumbnail) {
         this.thumbnail = thumbnail;
     }
 }
