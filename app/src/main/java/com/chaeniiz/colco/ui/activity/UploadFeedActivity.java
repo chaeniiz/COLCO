@@ -7,7 +7,6 @@ import android.provider.MediaStore;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -71,7 +70,6 @@ public class UploadFeedActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == 0) {
-            Log.e("image Count!!!!!!: ", String.valueOf(imageCount));
             try {
                 Bitmap image = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
 
