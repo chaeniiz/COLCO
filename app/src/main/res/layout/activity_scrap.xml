@@ -6,21 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.ScrapActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="7pt"
-        android:text="스크랩"
-        android:id="@+id/tv_scrap"
-        android:padding="12dp"
-        android:layout_alignParentTop="true"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_scrap"
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_scrap"
-        android:layout_above="@id/navigation"/>
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_scrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_scrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+    </RelativeLayout>
 
     <include
         android:id="@+id/navigation"
