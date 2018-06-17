@@ -31,6 +31,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_next"
             android:clickable="true"
+            android:textStyle="bold"
+            android:textColor="@color/pointColor"
             android:onClick="mOnClick"
             android:layout_gravity="center"
             android:paddingBottom="50dp"

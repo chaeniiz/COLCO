@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="80dp"
             android:gravity="center"
             android:text="COLCO에서 당신을\n무엇이라 부를까요?"
             android:textSize="14pt" />
@@ -26,6 +26,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="닉네임"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="@color/pointColor"
             android:padding="10dp" />
 
     </LinearLayout>

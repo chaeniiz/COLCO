@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="100dp"
             android:gravity="center"
             android:text="당신의 성별을\n알려 주세요."
             android:textSize="14pt" />
@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rb_gender_fm"
                 android:text="여성"
+                android:textColor="@color/radio_state"
                 android:textSize="10pt"
                 android:button="@null"/>
 
@@ -42,6 +43,7 @@
                 android:layout_marginLeft="50dp"
                 android:id="@+id/rb_gender_m"
                 android:text="남성"
+                android:textColor="@color/radio_state"
                 android:textSize="10pt"
                 android:button="@null"/>
 
