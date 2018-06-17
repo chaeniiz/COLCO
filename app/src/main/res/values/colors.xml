@@ -10,4 +10,6 @@
     <color name="transparent">#1A000000</color>
 
     <color name="colcoMain">#cccccc</color>
+
+    <color name="pointColor">#765bff</color>
 </resources>

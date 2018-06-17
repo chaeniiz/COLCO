@@ -70,6 +70,8 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:backgroundTint="@color/pointColor"
                         android:hint="user id"/>
 
                 </LinearLayout>
@@ -80,166 +82,181 @@
                     android:text="퍼스널 컬러"
                     android:layout_marginBottom="5dp"/>
 
-                <RadioGroup
+                <com.chaeniiz.colco.ui.util.RadioButtonWithTableLayout
                     android:id="@+id/rg_personal_color"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:orientation="horizontal"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
 
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:stretchColumns="*">
+                    <TableRow
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="3dp">
 
-                        <TableRow android:layout_margin="5dp">
+                        <RadioButton
+                            android:id="@+id/rb_pc_spring_warm"
+                            android:layout_width="66dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="center_horizontal"
+                            android:text="봄 웜"
+                            android:textColor="@color/radio_state"
+                            android:textSize="6pt" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_spring_warm"
-                                android:text="봄 웜"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_spring_warm_bright"
+                            android:text="봄 웜 브라이트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_spring_warm_light"
-                                android:layout_marginLeft="15dp"
-                                android:text="봄 웜 라이트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_spring_warm_light"
+                            android:text="봄 웜 라이트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_spring_warm_bright"
-                                android:layout_marginLeft="15dp"
-                                android:text="봄 웜 브라이트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                    </TableRow>
 
-                        </TableRow>
+                    <TableRow android:layout_marginBottom="8dp">
 
-                        <TableRow android:layout_margin="5dp">
+                        <RadioButton
+                            android:id="@+id/rb_pc_summer_cool"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="center_horizontal"
+                            android:text="여름 쿨"
+                            android:textColor="@color/radio_state"
+                            android:textSize="6pt" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_summer_cool"
-                                android:text="여름 쿨"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_summer_cool_light"
+                            android:text="여름 쿨 라이트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_summer_cool_light"
-                                android:layout_marginLeft="15dp"
-                                android:text="여름 쿨 라이트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_summer_cool_mute"
+                            android:text="여름 쿨 뮤트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_summer_cool_mute"
-                                android:layout_marginLeft="15dp"
-                                android:text="여름 쿨 뮤트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                    </TableRow>
 
-                        </TableRow>
+                    <TableRow android:layout_marginBottom="8dp">
 
-                        <TableRow android:layout_margin="5dp">
+                        <RadioButton
+                            android:id="@+id/rb_pc_fall_warm"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="center_horizontal"
+                            android:text="가을 웜"
+                            android:textColor="@color/radio_state"
+                            android:textSize="6pt" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_fall_warm"
-                                android:text="가을 웜"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_fall_warm_mute"
+                            android:text="가을 웜 뮤트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_fall_warm_mute"
-                                android:layout_marginLeft="15dp"
-                                android:text="가을 웜 뮤트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_pc_fall_warm_deep"
+                            android:text="가을 웜 딥"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_fall_warm_deep"
-                                android:layout_marginLeft="15dp"
-                                android:text="가을 웜 딥"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                    </TableRow>
 
-                        </TableRow>
+                    <TableRow android:layout_marginBottom="8dp">
 
-                        <TableRow android:layout_margin="5dp">
+                        <RadioButton
+                            android:id="@+id/rb_pc_winter_cool"
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="center_horizontal"
+                            android:text="겨울 쿨"
+                            android:textColor="@color/radio_state"
+                            android:textSize="6pt" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_winter_cool"
-                                android:text="겨울 쿨"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/rb_pc_winter_cool_bright"
+                            android:text="겨울 쿨 브라이트"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_winter_cool_deep"
-                                android:layout_marginLeft="15dp"
-                                android:text="겨울 쿨 딥"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                        <RadioButton
+                            android:textColor="@color/radio_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/rb_pc_winter_cool_deep"
+                            android:text="겨울 쿨 딥"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_winter_cool_bright"
-                                android:layout_marginLeft="15dp"
-                                android:text="겨울 쿨 브라이트"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                    </TableRow>
 
-                        </TableRow>
+                    <TableRow>
 
-                        <TableRow>
+                        <RadioButton
+                            android:textColor="@color/radio_state"
+                            android:layout_span="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/rb_pc_null"
+                            android:text="잘 모르겠어요"
+                            android:textSize="6pt"
+                            android:button="@null"/>
 
-                            <RadioButton
-                                android:layout_span="3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:id="@+id/rb_pc_null"
-                                android:text="잘 모르겠어요"
-                                android:textSize="6pt"
-                                android:button="@null"/>
+                    </TableRow>
 
-                        </TableRow>
-
-                    </TableLayout>
-
-                </RadioGroup>
+                </com.chaeniiz.colco.ui.util.RadioButtonWithTableLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -284,13 +301,15 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="여성"/>
+                            android:text="여성"
+                            android:buttonTint="@color/pointColor"/>
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
-                            android:text="남성"/>
+                            android:text="남성"
+                            android:buttonTint="@color/pointColor"/>
 
                     </RadioGroup>
 
