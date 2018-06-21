@@ -25,9 +25,11 @@
                 android:id="@+id/iv_thumbnail"/>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="상호명"
+                android:textColor="@color/colcoMain"
                 android:id="@+id/tv_shop_name"/>
 
             <TextView
@@ -40,12 +42,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="퍼스널 컬러"
+                android:textSize="7pt"
                 android:id="@+id/tv_personal_color"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="n%"
+                android:textSize="7pt"
                 android:id="@+id/tv_percentage"/>
 
         </LinearLayout>

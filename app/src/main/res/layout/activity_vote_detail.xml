@@ -185,6 +185,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/pointColor"
+            android:textCursorDrawable="@drawable/color_cursor"
             android:layout_weight="1"
             android:textSize="6pt"
             android:hint="댓글 쓰기..."/>

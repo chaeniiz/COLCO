@@ -69,7 +69,7 @@ public class VoteDetailActivity extends BaseActivity {
         int defaultItem = 0;
         SelectedItems.add(defaultItem);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogStyle);
         builder.setTitle("가장 잘 맞는 퍼스널 컬러를 선택해 주세요!");
         builder.setSingleChoiceItems(items, defaultItem,
                 new DialogInterface.OnClickListener() {
@@ -118,7 +118,7 @@ public class VoteDetailActivity extends BaseActivity {
         ListItems.add("겨울 쿨 딥 " + 0 + "%");
         final CharSequence[] items =  ListItems.toArray(new String[ ListItems.size()]);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogStyle);
         builder.setTitle("투표 결과");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int pos) { }

@@ -79,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="상호명을 입력해 주세요..."
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="6pt"
                 android:background="@null"/>
 
@@ -100,6 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="제품명을 입력해 주세요..."
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:textSize="6pt"
                 android:background="@null"/>
 

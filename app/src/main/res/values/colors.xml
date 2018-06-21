@@ -12,4 +12,5 @@
     <color name="colcoMain">#cccccc</color>
 
     <color name="pointColor">#765bff</color>
+    <color name="grayDark">#808080</color>
 </resources>

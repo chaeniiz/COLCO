@@ -34,7 +34,8 @@
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabIndicatorColor="@color/colcoMain" />
+                app:tabIndicatorColor="@color/pointColor"
+                app:tabSelectedTextColor="@color/pointColor"/>
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewpager"

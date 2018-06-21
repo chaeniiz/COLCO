@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/pointColor"
     tools:context="com.chaeniiz.colco.ui.activity.LoginActivity">
 
     <LinearLayout
@@ -17,19 +18,23 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/logo"
-            android:layout_marginTop="100dp"/>
+            android:layout_marginTop="150dp"/>
 
         <Button
             android:id="@+id/btn_fb_login"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/pointColor"
             android:text="Sign In with Facebook"
             android:layout_marginTop="60dp"/>
 
         <Button
             android:id="@+id/btn_google_login"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/pointColor"
             android:text="Sign In with Google+"/>
 
     </LinearLayout>
